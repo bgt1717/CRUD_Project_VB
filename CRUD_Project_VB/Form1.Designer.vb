@@ -29,13 +29,13 @@ Partial Class Form1
         Label5 = New Label()
         Label6 = New Label()
         Label7 = New Label()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
-        TextBox3 = New TextBox()
-        ComboBox1 = New ComboBox()
-        DateTimePicker1 = New DateTimePicker()
-        Alloweda = New RadioButton()
-        RadioButton1 = New RadioButton()
+        Textproductid = New TextBox()
+        Textitemname = New TextBox()
+        Textdesign = New TextBox()
+        Combocolor = New ComboBox()
+        DateTimePickerinsert = New DateTimePicker()
+        Radioallowed = New RadioButton()
+        Radionotallowed = New RadioButton()
         Button1 = New Button()
         DataGridView1 = New DataGridView()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -118,74 +118,74 @@ Partial Class Form1
         Label7.TabIndex = 6
         Label7.Text = "Warranty Type"
         ' 
-        ' TextBox1
+        ' Textproductid
         ' 
-        TextBox1.Font = New Font("Segoe UI", 10F)
-        TextBox1.Location = New Point(197, 90)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(366, 30)
-        TextBox1.TabIndex = 7
+        Textproductid.Font = New Font("Segoe UI", 10F)
+        Textproductid.Location = New Point(197, 90)
+        Textproductid.Name = "Textproductid"
+        Textproductid.Size = New Size(366, 30)
+        Textproductid.TabIndex = 7
         ' 
-        ' TextBox2
+        ' Textitemname
         ' 
-        TextBox2.Font = New Font("Segoe UI", 10F)
-        TextBox2.Location = New Point(197, 130)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(366, 30)
-        TextBox2.TabIndex = 8
+        Textitemname.Font = New Font("Segoe UI", 10F)
+        Textitemname.Location = New Point(197, 130)
+        Textitemname.Name = "Textitemname"
+        Textitemname.Size = New Size(366, 30)
+        Textitemname.TabIndex = 8
         ' 
-        ' TextBox3
+        ' Textdesign
         ' 
-        TextBox3.Font = New Font("Segoe UI", 10F)
-        TextBox3.Location = New Point(197, 173)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(366, 30)
-        TextBox3.TabIndex = 9
+        Textdesign.Font = New Font("Segoe UI", 10F)
+        Textdesign.Location = New Point(197, 173)
+        Textdesign.Name = "Textdesign"
+        Textdesign.Size = New Size(366, 30)
+        Textdesign.TabIndex = 9
         ' 
-        ' ComboBox1
+        ' Combocolor
         ' 
-        ComboBox1.Font = New Font("Segoe UI", 10F)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Black", "White", "Brown"})
-        ComboBox1.Location = New Point(197, 219)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(366, 31)
-        ComboBox1.TabIndex = 10
+        Combocolor.Font = New Font("Segoe UI", 10F)
+        Combocolor.FormattingEnabled = True
+        Combocolor.Items.AddRange(New Object() {"Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Black", "White", "Brown"})
+        Combocolor.Location = New Point(197, 219)
+        Combocolor.Name = "Combocolor"
+        Combocolor.Size = New Size(366, 31)
+        Combocolor.TabIndex = 10
         ' 
-        ' DateTimePicker1
+        ' DateTimePickerinsert
         ' 
-        DateTimePicker1.Font = New Font("Segoe UI", 10F)
-        DateTimePicker1.Format = DateTimePickerFormat.Short
-        DateTimePicker1.Location = New Point(197, 267)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(366, 30)
-        DateTimePicker1.TabIndex = 11
+        DateTimePickerinsert.Font = New Font("Segoe UI", 10F)
+        DateTimePickerinsert.Format = DateTimePickerFormat.Short
+        DateTimePickerinsert.Location = New Point(197, 267)
+        DateTimePickerinsert.Name = "DateTimePickerinsert"
+        DateTimePickerinsert.Size = New Size(366, 30)
+        DateTimePickerinsert.TabIndex = 11
         ' 
-        ' Alloweda
+        ' Radioallowed
         ' 
-        Alloweda.AutoSize = True
-        Alloweda.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        Alloweda.ForeColor = SystemColors.ButtonFace
-        Alloweda.Location = New Point(197, 314)
-        Alloweda.Name = "Alloweda"
-        Alloweda.Size = New Size(97, 27)
-        Alloweda.TabIndex = 12
-        Alloweda.TabStop = True
-        Alloweda.Text = "Allowed"
-        Alloweda.UseVisualStyleBackColor = True
+        Radioallowed.AutoSize = True
+        Radioallowed.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Radioallowed.ForeColor = SystemColors.ButtonFace
+        Radioallowed.Location = New Point(197, 314)
+        Radioallowed.Name = "Radioallowed"
+        Radioallowed.Size = New Size(97, 27)
+        Radioallowed.TabIndex = 12
+        Radioallowed.TabStop = True
+        Radioallowed.Text = "Allowed"
+        Radioallowed.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton1
+        ' Radionotallowed
         ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        RadioButton1.ForeColor = SystemColors.ButtonFace
-        RadioButton1.Location = New Point(309, 314)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(132, 27)
-        RadioButton1.TabIndex = 13
-        RadioButton1.TabStop = True
-        RadioButton1.Text = "Not Allowed"
-        RadioButton1.UseVisualStyleBackColor = True
+        Radionotallowed.AutoSize = True
+        Radionotallowed.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Radionotallowed.ForeColor = SystemColors.ButtonFace
+        Radionotallowed.Location = New Point(309, 314)
+        Radionotallowed.Name = "Radionotallowed"
+        Radionotallowed.Size = New Size(132, 27)
+        Radionotallowed.TabIndex = 13
+        Radionotallowed.TabStop = True
+        Radionotallowed.Text = "Not Allowed"
+        Radionotallowed.UseVisualStyleBackColor = True
         ' 
         ' Button1
         ' 
@@ -216,13 +216,13 @@ Partial Class Form1
         ClientSize = New Size(1003, 646)
         Controls.Add(DataGridView1)
         Controls.Add(Button1)
-        Controls.Add(RadioButton1)
-        Controls.Add(Alloweda)
-        Controls.Add(DateTimePicker1)
-        Controls.Add(ComboBox1)
-        Controls.Add(TextBox3)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox1)
+        Controls.Add(Radionotallowed)
+        Controls.Add(Radioallowed)
+        Controls.Add(DateTimePickerinsert)
+        Controls.Add(Combocolor)
+        Controls.Add(Textdesign)
+        Controls.Add(Textitemname)
+        Controls.Add(Textproductid)
         Controls.Add(Label7)
         Controls.Add(Label6)
         Controls.Add(Label5)
@@ -244,13 +244,13 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Alloweda As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Textproductid As TextBox
+    Friend WithEvents Textitemname As TextBox
+    Friend WithEvents Textdesign As TextBox
+    Friend WithEvents Combocolor As ComboBox
+    Friend WithEvents DateTimePickerinsert As DateTimePicker
+    Friend WithEvents Radioallowed As RadioButton
+    Friend WithEvents Radionotallowed As RadioButton
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
 
