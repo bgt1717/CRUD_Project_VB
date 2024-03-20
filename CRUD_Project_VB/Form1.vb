@@ -16,6 +16,8 @@ Public Class Form1
         End If
         Dim con As New SqlConnection("Data Source=(localdb)\Local;Initial Catalog=ProgrammingDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True")
         con.Open()
-        Dim command As New SqlCommand("Insert into Product_Setup_Tab values()")
+        Dim command As New SqlCommand("Insert into Product_Setup_Tab values('" & pid & "','" & iname & "','" & design & "','" & color & "','" & insertdate & "','" & wtype & "',)", con)
+        command.ExecuteNonQuery()
+        MessageBox.Show("Submission Successful")
     End Sub
 End Class
