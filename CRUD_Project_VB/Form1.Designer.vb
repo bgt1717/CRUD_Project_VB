@@ -38,6 +38,7 @@ Partial Class Form1
         Radionotallowed = New RadioButton()
         Button1 = New Button()
         DataGridView1 = New DataGridView()
+        Button2 = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -194,7 +195,7 @@ Partial Class Form1
         Button1.ForeColor = SystemColors.ButtonFace
         Button1.Location = New Point(197, 347)
         Button1.Name = "Button1"
-        Button1.Size = New Size(296, 41)
+        Button1.Size = New Size(162, 41)
         Button1.TabIndex = 14
         Button1.Text = "Submit"
         Button1.UseVisualStyleBackColor = False
@@ -208,12 +209,25 @@ Partial Class Form1
         DataGridView1.Size = New Size(979, 240)
         DataGridView1.TabIndex = 15
         ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.DarkSlateGray
+        Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Button2.ForeColor = SystemColors.ButtonFace
+        Button2.Location = New Point(365, 347)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(162, 41)
+        Button2.TabIndex = 16
+        Button2.Text = "Update"
+        Button2.UseVisualStyleBackColor = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Teal
         ClientSize = New Size(1003, 646)
+        Controls.Add(Button2)
         Controls.Add(DataGridView1)
         Controls.Add(Button1)
         Controls.Add(Radionotallowed)
@@ -253,5 +267,6 @@ Partial Class Form1
     Friend WithEvents Radionotallowed As RadioButton
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button2 As Button
 
 End Class
