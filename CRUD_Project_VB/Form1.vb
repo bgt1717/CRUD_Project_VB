@@ -20,11 +20,16 @@ Public Class Form1
         Dim command As New SqlCommand("Insert into Product_Setup_Tab values('" & pid & "','" & iname & "','" & design & "','" & color & "','" & insertdate & "','" & wtype & "',)", con)
         command.ExecuteNonQuery()
         MessageBox.Show("Submission Successful")
+        LoadDataInGrid()
     End Sub
     Private Sub LoadDataInGrid()
-        Dim command As New SqlCommand("select * from Product_Setup_Tab")
+        Dim command As New SqlCommand("select * from Product_Setup_Tab", con)
         Dim sda As New SqlDataAdapter(command)
         Dim dt As New DataTable
         DataGridView1.DataSource = dt
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadDataInGrid()
     End Sub
 End Class
