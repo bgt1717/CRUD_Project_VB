@@ -39,17 +39,18 @@ Partial Class Form1
         Button1 = New Button()
         DataGridView1 = New DataGridView()
         Button2 = New Button()
+        Button3 = New Button()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label1.Font = New Font("Segoe UI", 25F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.ButtonFace
-        Label1.Location = New Point(28, 24)
+        Label1.Location = New Point(28, 9)
         Label1.Name = "Label1"
-        Label1.Size = New Size(196, 28)
+        Label1.Size = New Size(412, 57)
         Label1.TabIndex = 0
         Label1.Text = "CRUD OPERATIONS"
         ' 
@@ -221,12 +222,25 @@ Partial Class Form1
         Button2.Text = "Update"
         Button2.UseVisualStyleBackColor = False
         ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
+        Button3.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Button3.ForeColor = SystemColors.ButtonFace
+        Button3.Location = New Point(533, 347)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(162, 41)
+        Button3.TabIndex = 17
+        Button3.Text = "Delete"
+        Button3.UseVisualStyleBackColor = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Teal
         ClientSize = New Size(1003, 646)
+        Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(DataGridView1)
         Controls.Add(Button1)
@@ -268,5 +282,6 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 
 End Class
