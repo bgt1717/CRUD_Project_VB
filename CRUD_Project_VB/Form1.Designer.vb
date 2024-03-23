@@ -40,6 +40,8 @@ Partial Class Form1
         DataGridView1 = New DataGridView()
         Button2 = New Button()
         Button3 = New Button()
+        Label8 = New Label()
+        TextBox1 = New TextBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -48,18 +50,18 @@ Partial Class Form1
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 25F, FontStyle.Bold)
         Label1.ForeColor = SystemColors.ButtonFace
-        Label1.Location = New Point(28, 9)
+        Label1.Location = New Point(24, 18)
         Label1.Name = "Label1"
-        Label1.Size = New Size(412, 57)
+        Label1.Size = New Size(539, 57)
         Label1.TabIndex = 0
-        Label1.Text = "CRUD OPERATIONS"
+        Label1.Text = "Computer Parts Inventory"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label2.ForeColor = SystemColors.ButtonFace
-        Label2.Location = New Point(28, 88)
+        Label2.Location = New Point(78, 88)
         Label2.Name = "Label2"
         Label2.Size = New Size(113, 28)
         Label2.TabIndex = 1
@@ -70,7 +72,7 @@ Partial Class Form1
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label3.ForeColor = SystemColors.ButtonFace
-        Label3.Location = New Point(28, 130)
+        Label3.Location = New Point(78, 130)
         Label3.Name = "Label3"
         Label3.Size = New Size(117, 28)
         Label3.TabIndex = 2
@@ -81,7 +83,7 @@ Partial Class Form1
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label4.ForeColor = SystemColors.ButtonFace
-        Label4.Location = New Point(28, 173)
+        Label4.Location = New Point(78, 171)
         Label4.Name = "Label4"
         Label4.Size = New Size(77, 28)
         Label4.TabIndex = 3
@@ -92,7 +94,7 @@ Partial Class Form1
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label5.ForeColor = SystemColors.ButtonFace
-        Label5.Location = New Point(28, 217)
+        Label5.Location = New Point(78, 215)
         Label5.Name = "Label5"
         Label5.Size = New Size(62, 28)
         Label5.TabIndex = 4
@@ -103,7 +105,7 @@ Partial Class Form1
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label6.ForeColor = SystemColors.ButtonFace
-        Label6.Location = New Point(28, 267)
+        Label6.Location = New Point(78, 254)
         Label6.Name = "Label6"
         Label6.Size = New Size(57, 28)
         Label6.TabIndex = 5
@@ -114,11 +116,11 @@ Partial Class Form1
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Label7.ForeColor = SystemColors.ButtonFace
-        Label7.Location = New Point(28, 309)
+        Label7.Location = New Point(78, 293)
         Label7.Name = "Label7"
-        Label7.Size = New Size(151, 28)
+        Label7.Size = New Size(100, 28)
         Label7.TabIndex = 6
-        Label7.Text = "Warranty Type"
+        Label7.Text = "Warranty"
         ' 
         ' Textproductid
         ' 
@@ -158,7 +160,7 @@ Partial Class Form1
         ' 
         DateTimePickerinsert.Font = New Font("Segoe UI", 10F)
         DateTimePickerinsert.Format = DateTimePickerFormat.Short
-        DateTimePickerinsert.Location = New Point(197, 267)
+        DateTimePickerinsert.Location = New Point(197, 256)
         DateTimePickerinsert.Name = "DateTimePickerinsert"
         DateTimePickerinsert.Size = New Size(366, 30)
         DateTimePickerinsert.TabIndex = 11
@@ -168,7 +170,7 @@ Partial Class Form1
         Radioallowed.AutoSize = True
         Radioallowed.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Radioallowed.ForeColor = SystemColors.ButtonFace
-        Radioallowed.Location = New Point(197, 314)
+        Radioallowed.Location = New Point(197, 298)
         Radioallowed.Name = "Radioallowed"
         Radioallowed.Size = New Size(97, 27)
         Radioallowed.TabIndex = 12
@@ -181,7 +183,7 @@ Partial Class Form1
         Radionotallowed.AutoSize = True
         Radionotallowed.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         Radionotallowed.ForeColor = SystemColors.ButtonFace
-        Radionotallowed.Location = New Point(309, 314)
+        Radionotallowed.Location = New Point(300, 298)
         Radionotallowed.Name = "Radionotallowed"
         Radionotallowed.Size = New Size(132, 27)
         Radionotallowed.TabIndex = 13
@@ -191,10 +193,10 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.DarkSlateGray
+        Button1.BackColor = Color.Green
         Button1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button1.ForeColor = SystemColors.ButtonFace
-        Button1.Location = New Point(197, 347)
+        Button1.Location = New Point(116, 378)
         Button1.Name = "Button1"
         Button1.Size = New Size(162, 41)
         Button1.TabIndex = 14
@@ -204,10 +206,10 @@ Partial Class Form1
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(12, 394)
+        DataGridView1.Location = New Point(12, 425)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(979, 240)
+        DataGridView1.Size = New Size(979, 209)
         DataGridView1.TabIndex = 15
         ' 
         ' Button2
@@ -215,7 +217,7 @@ Partial Class Form1
         Button2.BackColor = Color.DarkSlateGray
         Button2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button2.ForeColor = SystemColors.ButtonFace
-        Button2.Location = New Point(365, 347)
+        Button2.Location = New Point(284, 378)
         Button2.Name = "Button2"
         Button2.Size = New Size(162, 41)
         Button2.TabIndex = 16
@@ -227,12 +229,31 @@ Partial Class Form1
         Button3.BackColor = Color.FromArgb(CByte(192), CByte(0), CByte(0))
         Button3.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Button3.ForeColor = SystemColors.ButtonFace
-        Button3.Location = New Point(533, 347)
+        Button3.Location = New Point(452, 378)
         Button3.Name = "Button3"
         Button3.Size = New Size(162, 41)
         Button3.TabIndex = 17
         Button3.Text = "Delete"
         Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        Label8.ForeColor = SystemColors.ButtonFace
+        Label8.Location = New Point(78, 334)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(59, 28)
+        Label8.TabIndex = 18
+        Label8.Text = "Price"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Segoe UI", 10F)
+        TextBox1.Location = New Point(197, 336)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(366, 30)
+        TextBox1.TabIndex = 19
         ' 
         ' Form1
         ' 
@@ -240,6 +261,8 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Teal
         ClientSize = New Size(1003, 646)
+        Controls.Add(TextBox1)
+        Controls.Add(Label8)
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(DataGridView1)
@@ -283,5 +306,7 @@ Partial Class Form1
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox1 As TextBox
 
 End Class
