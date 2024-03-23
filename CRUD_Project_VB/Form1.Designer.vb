@@ -41,7 +41,7 @@ Partial Class Form1
         Button2 = New Button()
         Button3 = New Button()
         Label8 = New Label()
-        TextBox1 = New TextBox()
+        TextBoxPrice = New TextBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -209,7 +209,7 @@ Partial Class Form1
         DataGridView1.Location = New Point(12, 425)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(979, 209)
+        DataGridView1.Size = New Size(1151, 295)
         DataGridView1.TabIndex = 15
         ' 
         ' Button2
@@ -247,21 +247,21 @@ Partial Class Form1
         Label8.TabIndex = 18
         Label8.Text = "Price"
         ' 
-        ' TextBox1
+        ' TextBoxPrice
         ' 
-        TextBox1.Font = New Font("Segoe UI", 10F)
-        TextBox1.Location = New Point(197, 336)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(366, 30)
-        TextBox1.TabIndex = 19
+        TextBoxPrice.Font = New Font("Segoe UI", 10F)
+        TextBoxPrice.Location = New Point(197, 336)
+        TextBoxPrice.Name = "TextBoxPrice"
+        TextBoxPrice.Size = New Size(366, 30)
+        TextBoxPrice.TabIndex = 19
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Teal
-        ClientSize = New Size(1003, 646)
-        Controls.Add(TextBox1)
+        ClientSize = New Size(1175, 732)
+        Controls.Add(TextBoxPrice)
         Controls.Add(Label8)
         Controls.Add(Button3)
         Controls.Add(Button2)
@@ -307,6 +307,6 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBoxPrice As TextBox
 
 End Class

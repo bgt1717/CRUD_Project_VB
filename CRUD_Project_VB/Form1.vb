@@ -11,15 +11,19 @@ Public Class Form1
             Dim color = Combocolor.Text
             Dim insertdate = DateTimePickerinsert.Value
             Dim wtype = If(Radioallowed.Checked, "Allowed", "Not Allowed")
+            Dim price = TextBoxPrice.Text
 
             con.Open()
-            Dim command As New SqlCommand("INSERT INTO Product_Setup_Tab VALUES(@pid, @iname, @design, @color, @insertdate, @wtype)", con)
+            Dim command As New SqlCommand("INSERT INTO Product_Setup_Tab2 VALUES(@pid, @iname, @design, @color, @insertdate, @wtype, @price)", con)
             command.Parameters.AddWithValue("@pid", pid)
             command.Parameters.AddWithValue("@iname", iname)
             command.Parameters.AddWithValue("@design", design)
             command.Parameters.AddWithValue("@color", color)
             command.Parameters.AddWithValue("@insertdate", insertdate)
             command.Parameters.AddWithValue("@wtype", wtype)
+            command.Parameters.AddWithValue("@price", price)
+
+
             command.ExecuteNonQuery()
             con.Close()
             MessageBox.Show("Submission Successful")
@@ -30,7 +34,7 @@ Public Class Form1
     End Sub
 
     Private Sub LoadDataInGrid()
-        Dim command As New SqlCommand("SELECT * FROM Product_Setup_Tab", con)
+        Dim command As New SqlCommand("SELECT * FROM Product_Setup_Tab2", con)
         Dim sda As New SqlDataAdapter(command)
         Dim dt As New DataTable
         sda.Fill(dt)
@@ -49,15 +53,17 @@ Public Class Form1
             Dim color = Combocolor.Text
             Dim insertdate = DateTimePickerinsert.Value
             Dim wtype = If(Radioallowed.Checked, "Allowed", "Not Allowed")
+            Dim price = TextBoxPrice.Text
 
             con.Open()
-            Dim command As New SqlCommand("UPDATE Product_Setup_Tab SET ItemName = @iname, Design = @design, Color = @color, ItemDate = @insertdate, WarrantyType = @wtype WHERE Product_ID = @pid", con)
+            Dim command As New SqlCommand("UPDATE Product_Setup_Tab2 SET Product = @iname, Brand = @design, Color = @color, Date = @insertdate, WarrantyType = @wtype, Price = @price WHERE ID = @pid", con)
             command.Parameters.AddWithValue("@pid", pid)
             command.Parameters.AddWithValue("@iname", iname)
             command.Parameters.AddWithValue("@design", design)
             command.Parameters.AddWithValue("@color", color)
             command.Parameters.AddWithValue("@insertdate", insertdate)
             command.Parameters.AddWithValue("@wtype", wtype)
+            command.Parameters.AddWithValue("@price", price)
             command.ExecuteNonQuery()
             con.Close()
             MessageBox.Show("Successfully Updated")
@@ -71,7 +77,7 @@ Public Class Form1
         Dim pid As Integer
         If Integer.TryParse(Textproductid.Text, pid) Then
             con.Open()
-            Dim command As New SqlCommand("DELETE FROM Product_Setup_Tab WHERE Product_ID = @pid", con)
+            Dim command As New SqlCommand("DELETE FROM Product_Setup_Tab2 WHERE ID = @pid", con)
             command.Parameters.AddWithValue("@pid", pid)
             command.ExecuteNonQuery()
             MessageBox.Show("Successfully Deleted")
